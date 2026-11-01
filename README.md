@@ -20,7 +20,7 @@ cp .env.example .env
 ```
 Ajoute le jeton de ton bot Telegram dans `.env`, puis lance :
 ```bash
-python -m app.bot
+python main.py
 ```
 
 Le prototype ne fabrique aucune donnée : tant que le connecteur de matchs n'est pas configuré, il confirme simplement la réception du numéro.

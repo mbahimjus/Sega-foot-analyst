@@ -16,7 +16,7 @@ Python 3.11+ recommandé.
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env
+
 ```
 Ajoute le jeton de ton bot Telegram dans `.env`, puis lance :
 ```bash

@@ -1,7 +1,9 @@
 import asyncio
+import os
 import logging
 
 from aiogram import Bot, Dispatcher
+from aiogram.client.session.aiohttp import AiohttpSession
 from aiogram.filters import Command
 from aiogram.types import Message
 
@@ -68,7 +70,9 @@ async def main():
 
     init_db()
 
-    bot = Bot(token=BOT_TOKEN)
+    proxy = os.getenv("https_proxy")
+    session = AiohttpSession(proxy=proxy)
+    bot = Bot(token=BOT_TOKEN, session=session)
 
     try:
         await dp.start_polling(bot)
